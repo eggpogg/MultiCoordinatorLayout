@@ -1,32 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.eggpogg.testviewpagerintocoordinaterlayout.NestedCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/coordinator"
+    android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appBar"
+    <com.eggpogg.testviewpagerintocoordinaterlayout.NestedCoordinatorLayout
+        android:id="@+id/coordinator"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:gravity="top"
-            android:clipToPadding="false"
-            android:background="#99a5f4"
-            app:layout_scrollFlags="scroll|enterAlways|snap">
+            android:layout_height="wrap_content">
 
-        </android.support.v7.widget.Toolbar>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="top"
+                android:clipToPadding="false"
+                android:background="#99a5f4"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
 
-    </android.support.design.widget.AppBarLayout>
+                <TextView
+                    android:id="@+id/btnText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Drawer Toggle"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </com.eggpogg.testviewpagerintocoordinaterlayout.NestedCoordinatorLayout>
+
+    <FrameLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_gravity="start"
+        android:background="#daa4a4"/>
 
-</com.eggpogg.testviewpagerintocoordinaterlayout.NestedCoordinatorLayout>
+</android.support.v4.widget.DrawerLayout>

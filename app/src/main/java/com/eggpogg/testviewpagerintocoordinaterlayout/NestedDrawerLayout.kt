@@ -9,13 +9,13 @@ package com.eggpogg.testviewpagerintocoordinaterlayout
  */
 
 import android.content.Context
-import android.support.design.widget.CoordinatorLayout
 import android.support.v4.view.NestedScrollingChild
 import android.support.v4.view.NestedScrollingChildHelper
+import android.support.v4.widget.DrawerLayout
 import android.util.AttributeSet
 import android.view.View
 
-class NestedCoordinatorLayout : CoordinatorLayout, NestedScrollingChild {
+class NestedDrawerLayout : DrawerLayout, NestedScrollingChild {
 
     private var mChildHelper: NestedScrollingChildHelper? = null
 
